@@ -1,3 +1,11 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
+puts "3 Topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
@@ -9,7 +17,8 @@
      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in
      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    topic_id: 3
   )
 end
 
@@ -41,3 +50,5 @@ puts "5 Skills created"
 end
 
 puts "9 Porfolios created"
+
+
