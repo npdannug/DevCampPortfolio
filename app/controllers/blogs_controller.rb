@@ -68,7 +68,7 @@ class BlogsController < ApplicationController
       @blog.draft!
     end
         
-    redirect_to blogs_url, notice: 'Blog status updated successfully.'
+    redirect_to blogs_url, notice: 'Blog status was updated successfully.'
   end
 
   private
