@@ -5,7 +5,7 @@
 <p><%= @portfolio_item.body %></p>
 
 <h2>Technologies used: </h2>
-
+ 
 <% @portfolio_item.technologies.each do |t| %>
   <p><%= t.name %></p>
 <% end %>
@@ -16,3 +16,4 @@
 						method: :delete, data: { confirm: 'Are you sure?' } 
 						%>
 </p>
+ 
