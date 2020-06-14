@@ -1,5 +1,6 @@
 class Portfolio < ApplicationRecord
   include Placeholder
+  has_many :technologies
   extend FriendlyId
   friendly_id :title, use: :slugged
 
