@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  include DeviseWhitelist
-  include SetSource
+  include DeviseWhitelistConcern
+  include SetSourceConcern
+  include CurrentUserConcern
 
 end
