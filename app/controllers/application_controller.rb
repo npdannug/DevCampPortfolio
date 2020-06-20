@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_params, if: :devise_controller?
-  include DeviseWhitelist
-
+  include DeviseWhitelistConcern
+  include SetSourceConcern
+  include CurrentUserConcern
 
 end
