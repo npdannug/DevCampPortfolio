@@ -32,6 +32,7 @@ class PortfoliosController < ApplicationController
 
   def edit
   	@portfolio_item = Portfolio.friendly.find(params[:id]) 
+    3.times {@portfolio_item.technologies.build} 
   end
 
   def update
