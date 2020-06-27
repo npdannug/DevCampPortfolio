@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   include SetSourceConcern
   include CurrentUserConcern
   include DefaultPageContentConcern
-
-
+  
 end
+

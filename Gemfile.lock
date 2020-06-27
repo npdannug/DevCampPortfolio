@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/Kerbs10/dannug_view_tool
+  revision: f380722628c124ad8d87e1538f9f2f763fdbe9af
+  specs:
+    dannug_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -261,6 +267,7 @@ DEPENDENCIES
   bootstrap (~> 4.5.0)
   byebug
   capybara (>= 2.15)
+  dannug_view_tool!
   devise (~> 4.7, >= 4.7.2)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.7)

@@ -16,4 +16,9 @@ module ApplicationHelper
     end 
   end
 
+  def copyright_generator
+    DannugViewTool::Renderer.copyright 'Norman Paul Dannug', 'All rights reserved'
+  end
+
+
 end
