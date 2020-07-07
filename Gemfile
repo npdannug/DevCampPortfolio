@@ -35,6 +35,11 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'dannug_view_tool' #, git: 'https://github.com/Kerbs10/dannug_view_tool'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+#gem 'kaminari', '~> 0.16.3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap4', '~> 0.2.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
