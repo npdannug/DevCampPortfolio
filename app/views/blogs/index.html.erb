@@ -2,11 +2,12 @@
 <%= render 'shared/blog_featured' if !params[:page] || params[:page] == "1" %>
 
 <div class="col-md-8 blog-main">
-  <div class="border-bottom">
+  <%= link_to "Write a New Blog", new_blog_path if logged_in?(:site_admin) %>
+
+  <div class="border-bottom mt-4">
     <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
   </div>
-    <%= link_to "New Blog", new_blog_path if logged_in?(:site_admin) %>
-
+    
     <%= render @blogs %>
 
     <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
