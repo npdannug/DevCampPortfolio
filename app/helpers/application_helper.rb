@@ -32,6 +32,30 @@ module ApplicationHelper
   def copyright_generator
     DannugViewTool::Renderer.copyright 'Norman Paul Dannug', 'All rights reserved'
   end
+  
+  def nav_helper style, tag_type, tag_style = ''
+    nav_links = <<~NAV
+    <#{tag_type} class="#{tag_style}" >
+    <a href="#{root_path}" class="#{style} #{active? root_path}">Home</a>
+    </#{tag_type}>
+    <#{tag_type} class="#{tag_style}" >
+    <a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blogs</a>
+    </#{tag_type}>
+    <#{tag_type} class="#{tag_style}" >
+    <a href="#{portfolios_path}" class="#{style} #{active? portfolios_path}">Portfolios</a>
+    </#{tag_type}>
+    <#{tag_type} class="#{tag_style}" >
+    <a href="#{about_me_path}" class="#{style} #{active? about_me_path}">About</a>
+    </#{tag_type}>
+    <#{tag_type} class="#{tag_style}" >
+    <a href="#{contact_me_path}" class="#{style} #{active? contact_me_path}">Contact</a>
+    </#{tag_type}>
+    NAV
+    nav_links.html_safe
+  end
 
+  def active? path
+    "active" if current_page? path
+  end
 
 end

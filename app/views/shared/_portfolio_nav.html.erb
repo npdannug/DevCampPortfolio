@@ -6,33 +6,19 @@
 
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
       <ul class="navbar-nav">
+
         <li class="nav-item active">
           <div class="nav-link">Norman Paul Dannug</div>
         </li>
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Blog", blogs_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Portfolio", portfolios_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Contact", contact_me_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "About", about_me_path, class: 'nav-link'  %>
-        </li>
+        <%= nav_helper 'nav-link', 'li', 'nav-item' %>
         <li class="nav-item">
           <%= link_to "Create New Item", new_portfolio_path, class: 'nav-link' if logged_in?(:site_admin)  %>
         </li>
         <li class="nav-item">
-          <%= login_helper_for_li 'nav-link' %>
+          <%= login_helper 'nav-link' %>
         </li>
-
-        
+       
       </ul>
     </div>
   </nav>
-</header>
+</header> 
