@@ -8,7 +8,9 @@ class BlogsController < ApplicationController
   def index  
     @page_title = "My Portfolio Blog"
     @blogs = Blog.paginate(page: params[:page], per_page: 5)
-    
+    @first_featured_blog = Blog.order("created_at").last
+    @second_featured_blog = Blog.order("created_at").last(2).first
+    @third_featured_blog = Blog.order("created_at").last(3).first
   end
 
   # GET /blogs/1
@@ -16,6 +18,13 @@ class BlogsController < ApplicationController
   def show
     @page_title = @blog.title
     @seo_keywords = @blog.body
+  end
+
+  def primary_featured_post
+
+  end
+
+  def secondary_featured_posts
   end
 
   # GET /blogs/new
