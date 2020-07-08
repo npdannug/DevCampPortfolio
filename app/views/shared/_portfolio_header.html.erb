@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: #322449">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,7 +28,7 @@
           <%= link_to "Create New Item", new_portfolio_path, class: 'nav-link' if logged_in?(:site_admin)  %>
         </li>
         <li class="nav-item">
-          <%= login_helper 'nav-link' %>
+          <%= login_helper_for_li 'nav-link' %>
         </li>
 
         
