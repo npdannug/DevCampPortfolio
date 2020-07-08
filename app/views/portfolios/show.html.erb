@@ -1,19 +1,32 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-7">
+			<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+		</div>
+		<div class="col-md-5">
+			<h1><%= @portfolio_item.title %></h1>
+			<hr>
+			<h4><%= @portfolio_item.subtitle %></h4>
+			<p><%= @portfolio_item.body %></p>
 
-<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
-<h1><%= @portfolio_item.title %></h1>
-<p><%= @portfolio_item.subtitle %></p>
-<p><%= @portfolio_item.body %></p>
+			<h2>Technologies used: </h2>
+			 
+			<% @portfolio_item.technologies.each do |t| %>
+			  <h3><%= t.name %></h3>
+			<% end %>
+			
+			<% if logged_in?(:site_admin) %>
+				<p><%= link_to "Edit", edit_portfolio_path(@portfolio_item)%> | 
+					<%= link_to "Delete", 
+										portfolio_path(@portfolio_item), 
+										method: :delete, data: { confirm: 'Are you sure?' } 
+										%>
+			</p>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<h2>Technologies used: </h2>
- 
-<% @portfolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
-<% end %>
 
-<p><%= link_to "Edit", edit_portfolio_path(@portfolio_item)%> | 
-	<%= link_to "Delete", 
-						portfolio_path(@portfolio_item), 
-						method: :delete, data: { confirm: 'Are you sure?' } 
-						%>
-</p>
+
  
