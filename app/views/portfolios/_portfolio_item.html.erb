@@ -1,19 +1,19 @@
 
 <div class="col-md-4">
-  <div class="card mb-4 shadow-sm">
+  <div class="card mb-4 ">
     <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-    <div class="card-body">
+    <div class="card-body p-0 ml-1">
       <p class="card-text">
         <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item), class: "mr-1" %>
         <%= portfolio_item.subtitle %>
       </p>
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-between align-items-center ">
       	<% if logged_in?(:site_admin) %>
             <div class="btn-group">
-              <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "btn btn-sm btn-outline-info" %>
+              <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "btn btn-sm btn-outline-info mb-2" %>
 			        <%= link_to "Delete", 
 					portfolio_item, 
-					method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger" %>
+					method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-outline-danger mb-2" %>
             </div>
         <%end%>
       </div>
