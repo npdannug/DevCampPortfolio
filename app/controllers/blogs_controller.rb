@@ -20,13 +20,6 @@ class BlogsController < ApplicationController
     @seo_keywords = @blog.body
   end
 
-  def primary_featured_post
-
-  end
-
-  def secondary_featured_posts
-  end
-
   # GET /blogs/new
   def new
     @blog = Blog.new

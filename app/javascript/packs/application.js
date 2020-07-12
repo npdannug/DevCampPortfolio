@@ -15,26 +15,4 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require jquery_ujs
-//= require jquery
-//= require turbolinks
-//= require bootstrap
-//= require_tree .
-
-
-@import $ from 'jquery';
-@import 'bootstrap/dist/js/bootstrap';
-@import './styles';
-$(document).on('turbolinks:load', function() {
-  $('body').tooltip({
-    selector: '[navbar-toggler="tooltip"]',
-    container: 'body',
-  });
-
-  $('body').popover({
-    selector: '[navbar-toggler="popover"]',
-    container: 'body',
-    html: true,
-    trigger: 'hover',
-  });
-});
+import "bootstrap"

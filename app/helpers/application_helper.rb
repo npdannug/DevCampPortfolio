@@ -9,16 +9,16 @@ module ApplicationHelper
     end 
   end
 
-  def login_helper_for_li style = ''
+  def login_helper_for_li li_style = '', link_style = ''
     if current_user.is_a?(GuestUser)
-      "<li class='nav-item'>".html_safe +
-      (link_to 'Log in', new_user_session_path, class: 'nav-link') +
+      "<li class='#{li_style}'>".html_safe +
+      (link_to 'Log in', new_user_session_path, class: link_style) +
       ("</li>".html_safe) +
-      "<li class='nav-item'>".html_safe +
-      (link_to 'Register', new_user_registration_path, class: 'nav-link') +
+      "<li class='#{li_style}'>".html_safe +
+      (link_to 'Register', new_user_registration_path, class: link_style) +
       ("</li>".html_safe) 
     else 
-      link_to 'Logout', destroy_user_session_path, method: :delete, class: style
+      link_to 'Logout', destroy_user_session_path, method: :delete, class: link_style
     end 
   end
 
