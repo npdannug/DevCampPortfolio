@@ -32,25 +32,42 @@ module ApplicationHelper
   def copyright_generator
     DannugViewTool::Renderer.copyright 'Norman Paul Dannug', 'All rights reserved'
   end
+
+  def nav_items
+    [
+      {
+        url: root_path,
+        title: 'Home'
+      },
+      {
+        url: blogs_path,
+        title: 'Blogs'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolios'
+      },
+      {
+        url: about_me_path,
+        title: 'About'
+      },
+      {
+        url: contact_me_path,
+        title: 'Contact'
+      },
+
+    ]
+      
+  end
   
   def nav_helper style, tag_type, tag_style = ''
-    nav_links = <<~NAV
-    <#{tag_type} class="#{tag_style}" >
-    <a href="#{root_path}" class="#{style} #{active? root_path}">Home</a>
-    </#{tag_type}>
-    <#{tag_type} class="#{tag_style}" >
-    <a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blogs</a>
-    </#{tag_type}>
-    <#{tag_type} class="#{tag_style}" >
-    <a href="#{portfolios_path}" class="#{style} #{active? portfolios_path}">Portfolios</a>
-    </#{tag_type}>
-    <#{tag_type} class="#{tag_style}" >
-    <a href="#{about_me_path}" class="#{style} #{active? about_me_path}">About</a>
-    </#{tag_type}>
-    <#{tag_type} class="#{tag_style}" >
-    <a href="#{contact_me_path}" class="#{style} #{active? contact_me_path}">Contact</a>
-    </#{tag_type}>
-    NAV
+    nav_links = ""
+    nav_items.each do |item|
+      nav_links << 
+        "<#{tag_type} class='#{tag_style}'>
+        <a href= '#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a>
+        </#{tag_type}>"
+    end
     nav_links.html_safe
   end
 
