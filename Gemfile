@@ -39,6 +39,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 #gem 'kaminari', '~> 0.16.3'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
