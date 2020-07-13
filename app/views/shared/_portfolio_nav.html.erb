@@ -19,10 +19,9 @@
   </div>
   <div class="navbar navbar-dark shadow-sm">
     <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"></svg>
-        <h3 id="nav-myname">Norman Paul Dannug</h3>
-      </a>
+      <h3 id="nav-myname">
+        <%= link_to "Norman Paul Dannug", about_me_path, class: "text-white text-left" %>
+      </h3>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
