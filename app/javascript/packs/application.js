@@ -22,3 +22,5 @@ import "bootstrap"
 //= require jquery-ui
 //= require_tree .
 
+
+import "controllers"

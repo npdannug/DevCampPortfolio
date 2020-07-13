@@ -1,4 +1,6 @@
 class Portfolio < ApplicationRecord
+  acts_as_list
+
   include Placeholder
 
   has_many :technologies

@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact-me', to: 'pages#contact'
 
-  resources :portfolios
+  resources :portfolios do
+    member do
+      patch :move 
+    end
+  end
+
 
   resources :blogs do
     member do
