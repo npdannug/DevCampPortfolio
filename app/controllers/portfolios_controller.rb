@@ -1,7 +1,9 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy, :move]
   layout "portfolio"
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [:show, :index, :angular], 
+        user: {except: [:destroy, :new, :create, :update, :edit, :move]}, 
+        site_admin: :all
 
   def index
   	@portfolio_items = Portfolio.by_postion
@@ -55,7 +57,7 @@ class PortfoliosController < ApplicationController
   end
 
   def move
-    @portfolio_item.insert_at(params[:position].to_i)
+    @portfolio_item.insert_at(params[:position].to_i) 
   end
 
   private
