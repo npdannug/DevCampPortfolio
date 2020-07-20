@@ -16,7 +16,6 @@ require("packs/html.sortable")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-
 //= require cocoon
 //= require jquery-ui
 //= require jquery_ujs
@@ -26,3 +25,4 @@ require("packs/html.sortable")
 import "bootstrap"
 import "controllers"
 import 'cocoon-js'
+

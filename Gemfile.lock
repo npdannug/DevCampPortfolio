@@ -116,6 +116,8 @@ GEM
     ffi (1.13.0-java)
     ffi (1.13.0-x64-mingw32)
     ffi (1.13.0-x86-mingw32)
+    flash_rails_messages (0.1.4)
+      rails (>= 4.0)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     friendly_id (5.2.5)
@@ -337,6 +339,7 @@ DEPENDENCIES
   dannug_view_tool
   devise (~> 4.7, >= 4.7.2)
   dotenv-rails (~> 2.7, >= 2.7.6)
+  flash_rails_messages (~> 0.1.0)
   font-awesome-rails (~> 4.7, >= 4.7.0.2)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.7)

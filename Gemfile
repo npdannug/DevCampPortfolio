@@ -48,7 +48,7 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 gem 'acts_as_list', '~> 1.0', '>= 1.0.1'
 gem 'rmagick', '~> 4.1', '>= 4.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
-
+gem 'flash_rails_messages', '~> 0.1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -12,6 +12,9 @@
           <ul class="list-unstyled">
             <%= nav_helper 'text-white', 'li', 'nav-item' %>
             <%= login_helper_for_li  '', 'text-white nav-item' %>
+            <li>
+              <%= link_to 'Create New Item', new_portfolio_path, class: "text-white nav-item" if logged_in?(:site_admin) %>
+            </li>
           </ul>
         </div>
       </div>

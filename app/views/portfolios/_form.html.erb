@@ -1,9 +1,6 @@
+
 <%= form_with(model: @portfolio_item, local: true) do |form| %>
-  <ul>
-  <% @portfolio_item.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-  </ul>
+  <%= render 'shared/errors', obj: @portfolio_item  %>
   <div class="row">
     <div class="col-md-4">  
       <div class="form-group">
