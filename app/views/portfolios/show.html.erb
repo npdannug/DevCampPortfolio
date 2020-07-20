@@ -12,16 +12,22 @@
 			<h2>Technologies used: </h2>
 			 
 			<% @portfolio_item.technologies.each do |t| %>
-			  <h3><%= t.name %></h3>
+			  <div><%= t.name %></div>
 			<% end %>
-			
+			<hr>
 			<% if logged_in?(:site_admin) %>
-				<p><%= link_to "Edit", edit_portfolio_path(@portfolio_item)%> | 
-					<%= link_to "Delete", 
-										portfolio_path(@portfolio_item), 
-										method: :delete, data: { confirm: 'Are you sure?' } 
-										%>
-			</p>
+				<div class="btn-group btn-group-toggle w-50" data-toggle="buttons">
+	  				<label class="btn btn-info w-50">
+						<%= link_to "Edit", edit_portfolio_path(@portfolio_item), class: 'text-white' %> 
+					</label>
+					<label class="btn btn-danger w-50">
+						<%= link_to "Delete", 
+											portfolio_path(@portfolio_item), 
+											class: 'text-white',
+											method: :delete, data: { confirm: 'Are you sure?' } 
+											%>
+					</label>
+				</div>
 			<% end %>
 		</div>
 	</div>

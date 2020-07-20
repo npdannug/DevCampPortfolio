@@ -94,6 +94,7 @@ GEM
     cloudinary (1.16.1)
       aws_cf_signer
       rest-client
+    cocoon (1.2.14)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     dannug_view_tool (0.1.0)
@@ -332,6 +333,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave (~> 0.11.2)
   cloudinary (~> 1.16, >= 1.16.1)
+  cocoon (~> 1.2, >= 1.2.9)
   dannug_view_tool
   devise (~> 4.7, >= 4.7.2)
   dotenv-rails (~> 2.7, >= 2.7.6)

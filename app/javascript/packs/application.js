@@ -15,12 +15,14 @@ require("packs/html.sortable")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import "bootstrap"
 
+
+//= require cocoon
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
 
-
+import "bootstrap"
 import "controllers"
+import 'cocoon-js'
