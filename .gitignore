@@ -34,3 +34,4 @@ yarn-debug.log*
 /config/secrets.yml
 .env
 /public/uploads/tmp
+/public/uploads/portfolio
