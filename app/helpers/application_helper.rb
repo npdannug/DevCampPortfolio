@@ -40,20 +40,24 @@ module ApplicationHelper
         title: 'Home'
       },
       {
-        url: blogs_path,
-        title: 'Blogs'
-      },
-      {
-        url: portfolios_path,
-        title: 'Portfolios'
-      },
-      {
         url: about_me_path,
         title: 'About'
       },
       {
         url: contact_me_path,
         title: 'Contact'
+      },
+      {
+        url: tech_news_path,
+        title: 'Tech News'
+      },
+      {
+        url: blogs_path,
+        title: 'Blogs'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolios'
       },
 
     ]
