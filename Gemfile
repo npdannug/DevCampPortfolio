@@ -40,7 +40,6 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-
 gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'cloudinary', '~> 1.16', '>= 1.16.1'
@@ -50,6 +49,9 @@ gem 'rmagick', '~> 4.1', '>= 4.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'flash_rails_messages', '~> 0.1.0'
 gem 'twitter', '~> 6.2'
+gem 'redis', '~> 3.3', '>= 3.3.1'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
