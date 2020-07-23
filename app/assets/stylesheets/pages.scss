@@ -1,2 +1,14 @@
 @import "bootstrap"; 
 @import "font-awesome";
+
+.tweet a {
+  color: green
+}
+
+.tweet a:focus {
+  color: green !important
+}
+
+.tweet a:hover {
+  color: green !important
+}
