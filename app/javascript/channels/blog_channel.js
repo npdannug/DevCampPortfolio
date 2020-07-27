@@ -4,7 +4,8 @@ document.addEventListener('turbolinks:load', () => {
 	
 	const blog_element = document.getElementById('blog-id')
 	const blog_id = Number(blog_element.getAttribute('data-blog-id')) 
-	
+	const btn_post = document.getElementById("post-comment")
+	const txt_comment = document.getElementById("comment")
 	console.log(consumer.subscriptions)
 
 	consumer.subscriptions.create({channel: "BlogChannel", blog_id: blog_id }, {
@@ -20,6 +21,9 @@ document.addEventListener('turbolinks:load', () => {
 
 	    const commentContainer = document.getElementById("comments")
 	    commentContainer.innerHTML = commentContainer.innerHTML + data.html
+	    
+	    txt_comment.value = ''
+	    btn_post.disabled = false
 	  }
 	});
 })

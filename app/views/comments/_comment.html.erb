@@ -1,13 +1,16 @@
-<div class="comment-card">
+<div class="comment-card mt-3">
 	<div class="card">
 		<div class="card-body">
 		  <div class="row">
 		  	<div class="col-md-1">
-
+		  		<%= gravatar_helper comment.user %>
 		  	</div>
 		  	<div class="col-md-11">
-		  		<%= comment.context %> - <%= comment.user.name %>
-		  	</div>
+		  		<div><%= comment.context %></div>	  		
+		  		<small>
+		  			<strong class="text-success font-italic"><%= comment.user.name %></strong> <%= time_ago_in_words(comment.created_at) %> ago
+		  		</small>
+		  	</div>		  	
 		  </div>
 		</div>
 	</div>

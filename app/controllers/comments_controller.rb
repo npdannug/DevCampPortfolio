@@ -1,16 +1,18 @@
 class CommentsController < ApplicationController
-	def new
-		@comment = Comment.new
-	end
+
+    def new
+      @comments = Comment.all
+      @comment = Comment.new
+    end
 
 	def create
-		@comment = Comment.new(comment_params) 
-		@comment.user = current_user		
-		if @comment.save
-			PostCommentJob.perform_later(@comment)
-			
-		end
-	end
+	  @comment = current_user.comments.build(comment_params) 
+	  @comment.user = current_user		
+	  @comment.save
+	  
+    end
+
+    
 
 	private
 	def comment_params

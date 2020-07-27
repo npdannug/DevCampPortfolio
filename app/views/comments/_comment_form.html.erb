@@ -1,10 +1,9 @@
   <% unless current_user.is_a? GuestUser %>
-  	<%= form_with(model: comment, local: true, url: '#') do |f| %>
+  	<%= form_with(model: comment, local: true) do |f| %>
   		<div class="form-group">
-  			<%= f.label "Comment", class: 'text-muted' %>
-  			<%= f.text_area :context, class: 'form-control' %>
+  			<%= f.text_area :context, class: 'form-control', id: 'comment' %>
   		</div> 
   		<%= f.hidden_field :blog_id, value: blog.id %>
-  		<%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+  		<%= f.submit 'Post Comment', class: 'btn btn-primary', id: "post-comment" %>
   	<% end %>
   <% end %>
