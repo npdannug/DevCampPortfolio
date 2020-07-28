@@ -28,18 +28,21 @@
 	      	  Published <%= time_ago_in_words(@third_featured_blog.created_at) %> ago
 	        </small>
 	      </div>
-	      <p class="card-text mb-auto"><%= @second_featured_blog.body.truncate_words(15) %></p>
-	      <p>
-			  <% if logged_in?(:site_admin) %>
-				  <p class="blog-post-meta">
+	      <p class="card-text mb-auto">
+	      	<%= @second_featured_blog.body.truncate_words(15) %>
+	    
+		  		<% if logged_in?(:site_admin) %>
+				  	<p class="blog-post-meta">
 				  	<%= link_to @second_featured_blog.status, 
 				  		toggle_status_blog_path(@second_featured_blog) %>
 				  	<%= link_to 'Edit', edit_blog_path(@second_featured_blog) %>
 				  	<%= link_to 'Delete', @second_featured_blog, 
 				  		method: :delete, data: { confirm: 'Are you sure?' } %>	
-				  </p>
-			  <% end %>
+					</p>
+		  		<% end %>
+	     
 	      </p>
+
 	      <%= link_to "Continue reading", blog_path(@second_featured_blog), class: "stretched-link" %>
 	    </div>
 	    <div class="col-auto d-none d-lg-block">
