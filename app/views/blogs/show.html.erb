@@ -1,7 +1,8 @@
 <div class="col-md-8 blog-main">
-  <h2 class="pb-4 mb-4 border-bottom">
+  <h2 class="mb-1">
     <%= @blog.title %>
   </h2>
+  <p><%= @blog.topic.title %></p>
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)  %> 
   <p class="mb-5"><%= @blog.body %></p>
   <hr>
