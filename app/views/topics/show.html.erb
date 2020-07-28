@@ -1,0 +1,12 @@
+<div class="col-md-8 blog-main">
+  <h2><%= @topic.title %></h2>
+  <div class="border-bottom mt-4">
+    <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+    
+    <%= render @blogs %>
+
+    <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+        
+</div>
+
