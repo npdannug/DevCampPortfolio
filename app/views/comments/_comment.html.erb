@@ -8,7 +8,10 @@
 		  	<div class="col-md-11">
 		  		<div><%= comment.context %></div>	  		
 		  		<small>
-		  			<strong class="text-success font-italic"><%= comment.user.name %></strong> <%= time_ago_in_words(comment.created_at) %> ago
+		  			<strong class="text-success font-italic">
+		  				<%= comment.user.name %>
+		  			</strong> 
+		  			<%= time_ago_in_words(comment.created_at) %> ago
 		  		</small>
 		  	</div>		  	
 		  </div>
