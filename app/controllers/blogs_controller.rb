@@ -7,10 +7,21 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index  
     @page_title = "My Portfolio Blog"
-    @blogs = Blog.paginate(page: params[:page], per_page: 5)
-    @first_featured_blog = Blog.order("created_at").last
-    @second_featured_blog = Blog.order("created_at").last(2).first
-    @third_featured_blog = Blog.order("created_at").last(3).first
+
+    @first_featured_blog = Blog.first_featured
+    @second_featured_blog = Blog.second_featured
+    @third_featured_blog = Blog.third_featured
+
+    ids_to_exclude = [@first_featured_blog.id, @second_featured_blog.id, @third_featured_blog.id]
+
+    if logged_in?(:site_admin)
+      @blogs = Blog.where.not(id: ids_to_exclude).recent.paginate(page: params[:page], per_page: 5)
+    else
+      @blogs = Blog.published
+            .where.not(id: ids_to_exclude)
+            .recent.paginate(page: params[:page], per_page: 5)
+    end
+
   end
 
   # GET /blogs/1
