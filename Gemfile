@@ -50,7 +50,8 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'flash_rails_messages', '~> 0.1.0'
 gem 'twitter', '~> 6.2'
 gem 'redis', '~> 3.3', '>= 3.3.1'
-
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
