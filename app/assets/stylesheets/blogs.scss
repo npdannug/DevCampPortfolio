@@ -1,6 +1,50 @@
 @import "bootstrap"; 
 @import "font-awesome";
 
+@font-face {
+  font-family: 'Lato';
+  src: font-url('Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: font-url('RobotoSlab-Regular.ttf') format('truetype');
+}
+
+.font-robo{
+  font-family: 'Roboto Slab';
+}
+
+.font-lato{
+  font-family: 'Roboto Slab';
+}
+
+body {
+  font-family: 'Lato';
+}
+
+
+body h1, .h1{
+  font-family: 'Roboto Slab';
+}
+
+h2, .h2{
+  font-family: 'Roboto Slab';
+}
+
+body h3, .h3{
+  font-family: 'Roboto Slab';
+}
+
+h4, .h4{
+  font-family: 'Roboto Slab';
+}
+
+h5, .h5{
+  font-family: 'Roboto Slab';
+}
+
+
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
@@ -127,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-body{
-  font-family: 'Lato', sans-serif !important;
+  
   color: #555;
   font-size: 1rem;
 }

@@ -2,6 +2,31 @@
 @import "font-awesome";
 @import "jquery-ui";
 
+@font-face {
+  font-family: 'Lato';
+  src: font-url('Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: font-url('RobotoSlab-Regular.ttf') format('truetype');
+}
+
+
+body {
+  font-family: 'Lato';
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5{
+  font-family: 'Roboto Slab';
+}
+
+
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
