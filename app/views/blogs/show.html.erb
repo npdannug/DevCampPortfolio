@@ -3,22 +3,19 @@
     <%= simple_format(@blog.title) %>
   </h2>
 
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><%= link_to "Blogs", blogs_path %></li>
-      <li class="breadcrumb-item"><%= link_to @blog.topic.title, topic_path(@blog.topic) %></li>
-      <li class="breadcrumb-item active" aria-current="page"><%= @blog.title %> </li>
-      <li class="float-right">
-        
-      </li>
-    </ol>
+  <nav aria-label="breadcrumb" class="breadcrumb">
+
+      <span class="breadcrumb-item"><%= link_to "Blogs", blogs_path %></span>
+      <span class="breadcrumb-item"><%= link_to @blog.topic.title, topic_path(@blog.topic) %></span>
+      <span class="breadcrumb-item active" aria-current="page"><%= @blog.title %> </span>
+
     <% if logged_in?(:site_admin)%>
-      <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-        <%= link_to "Edit", edit_blog_path(@blog), class: "btn btn-secondary"%>
-        <%= link_to 'Delete', @blog, method: :delete, 
-                                    data: { confirm: 'Are you sure?' }, 
-                                    class: "btn btn-secondary" %>  
-      </div>
+      <span class="ml-auto" >
+        <%= link_to fa_icon('pencil'), edit_blog_path(@blog)%>
+        <%= link_to fa_icon('trash'), @blog, method: :delete, 
+                                    data: { confirm: 'Are you sure?' }, class: "ml-1"
+        %>  
+      </span>
     <% end %>
   </nav>
 
