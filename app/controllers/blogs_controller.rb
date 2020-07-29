@@ -9,17 +9,10 @@ class BlogsController < ApplicationController
   def index  
     @page_title = "My Portfolio Blog"
 
-    @first_featured_blog = Blog.first_featured
-    @second_featured_blog = Blog.second_featured
-    @third_featured_blog = Blog.third_featured
-
-    ids_to_exclude = [@first_featured_blog.id, @second_featured_blog.id, @third_featured_blog.id]
-
     if logged_in?(:site_admin)
-      @blogs = Blog.where.not(id: ids_to_exclude).recent.paginate(page: params[:page], per_page: 5)
+      @blogs = Blog.recent.paginate(page: params[:page], per_page: 5)
     else
       @blogs = Blog.published
-            .where.not(id: ids_to_exclude)
             .recent.paginate(page: params[:page], per_page: 5)
     end
 
