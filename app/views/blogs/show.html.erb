@@ -2,11 +2,26 @@
   <h2 class="mb-1">
     <%= simple_format(@blog.title) %>
   </h2>
-  <p class="blog-topic-nav rounded">
-    <%= link_to "Home", blogs_path %> /
-    <%= link_to @blog.topic.title, topic_path(@blog.topic) %> /
-    <%= @blog.title %> 
-  </p>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><%= link_to "Blogs", blogs_path %></li>
+      <li class="breadcrumb-item"><%= link_to @blog.topic.title, topic_path(@blog.topic) %></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= @blog.title %> </li>
+      <li class="float-right">
+        
+      </li>
+    </ol>
+    <% if logged_in?(:site_admin)%>
+      <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+        <%= link_to "Edit", edit_blog_path(@blog), class: "btn btn-secondary"%>
+        <%= link_to 'Delete', @blog, method: :delete, 
+                                    data: { confirm: 'Are you sure?' }, 
+                                    class: "btn btn-secondary" %>  
+      </div>
+    <% end %>
+  </nav>
+
   <p class="mb-1 blog-body"><%= markdown @blog.body %></p>
   <hr>
   <div id="blog-id" data-blog-id="<%= @blog.id %>" ></div>
