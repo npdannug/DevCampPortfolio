@@ -6,7 +6,7 @@
 			<%= image_tag "profile.jpg", width: 280, height: 400 , alt: "Profile Image"  %>
 			<div class="skills">
 				<% @skills.each do |skill| %>
-				  <h4 class="mt-2"><%= skill.title %></h4>
+				  <h5 class="mt-2"><%= skill.title %></h5>
 				  <div class="progress">
 				  	<div 
 				  		class="progress-bar progress-bar-striped bg-warning"
@@ -49,19 +49,52 @@
 			</p>
 			<p>
 				<div class="collapse mb-2" id="jobHistory">
-					<div class="card">
-						<div class="card-body text-muted">
-							Jodfadsfdsffs
+					<div class="comment-card mt-3">
+						<div class="card">
+							<div class="card-body">
+							  <div class="row">
+							  	<div class="col-md-3">
+							  		<%= image_tag "accenture-logo.png", alt: "Accenture Logo", id: "acn-logo"  %>
+							  	</div>
+							  	<div class="col-md-9 pr-3">
+							  		<div>
+							  			<h6>Software Engineer</h6> 
+							  			<span>Developed point-of-concept applications and became a support developer for a number of projects</span>
+							  		</div>	  		
+							  		<small>
+							  			<strong class="text-success font-italic">
+							  				(2014 - 2019)
+							  			</strong> 
+							  		</small>
+							  	</div>		  	
+							  </div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="collapse mb-2 card" id="education">	
-					<div class="card-body text-muted">
-						Schoool
-					</div>
-					<hr>
-					<div class="card-body text-muted">
-						Schoool
+					<div class="comment-card">
+						<div>
+							<div class="card-body">
+							    <div class="row">
+								  	<div class="col-md-3">
+								  		<%= image_tag "csu.jpeg", alt: "CSU Logo", id: "csu-logo"  %>
+								  	</div>
+								  	<div class="col-md-9 pr-3">
+								  		<div>
+								  			<h6></h6> 
+								  			<span>Graduated from Cagayan State University with a BS in Information Technology, awarded as Best Programmer of the Year and Best Thesis Developed.</span>
+								  		</div>
+								  		<small>
+								  			<strong class="text-success font-italic">
+								  				(2009 - 2013)
+								  			</strong> 
+								  		</small>
+
+								  	</div>		  	
+							    </div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</p>

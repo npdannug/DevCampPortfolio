@@ -53,11 +53,12 @@ a:hover {
  * Base structure
  */
 
+
 html,
 body {
-  height: 100%;
-  
   text-shadow: none !important;
+  height: auto;
+    min-height: 100vh !important;
 }
 
 body {

@@ -2,5 +2,5 @@
   <h2 class="blog-post-title font-robo"><%= link_to blog.title, blog %></h2>
   <p class="blog-post-meta">published <%= time_ago_in_words(blog.created_at) %> ago</p>
   <%= render 'blogs/admin_options', blog: blog %>
-  <p><%= markdown blog.body %></p>
+  <div class="md-body"><%= markdown blog.body %></div>
 </div>
