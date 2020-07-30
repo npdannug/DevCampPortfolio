@@ -174,10 +174,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px
 }
 
-.blog-body{
+body{
   
-  color: #555;
-  font-size: 1rem;
+ 
+  font-size: 1.1rem;
 }
 
 .blogcrumb a{
@@ -192,3 +192,11 @@ h1, h2, h3, h4, h5, h6 {
 .published{
   color: blue
 }
+
+
+blockquote{
+ border-left: 6px solid #1a8cff !important;
+ background-color: #e6f2ff;
+ margin-left: 10px;
+ padding-left: 10px;
+ }
