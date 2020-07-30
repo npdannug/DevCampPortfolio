@@ -4,7 +4,7 @@
   <div class="text-muted desc">Something something</div>
   <%= link_to "Write a New Blog", new_blog_path if logged_in?(:site_admin) %>
 
-  <div class="border-bottom mt-4">
+  <div class="mt-5">
     <%= will_paginate @blogs, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
   </div>
     
