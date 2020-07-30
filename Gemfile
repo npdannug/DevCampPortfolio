@@ -40,7 +40,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 2.1.0'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'cloudinary', '~> 1.16', '>= 1.16.1'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
@@ -52,6 +52,7 @@ gem 'twitter', '~> 6.2'
 gem 'redis', '~> 3.3', '>= 3.3.1'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.3'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

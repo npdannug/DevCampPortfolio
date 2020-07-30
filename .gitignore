@@ -35,3 +35,6 @@ yarn-debug.log*
 .env
 /public/uploads/tmp
 /public/uploads/portfolio
+
+# Ignore application configuration
+/config/application.yml
