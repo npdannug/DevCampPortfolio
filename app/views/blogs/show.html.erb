@@ -7,6 +7,8 @@
     <%= @blog.title %>
   </h2>
 
+  <small class="blog-post-meta">published <%= time_ago_in_words(@blog.created_at) %> ago</small>
+
   <nav aria-label="breadcrumb" class="breadcrumb">
 
       <span class="breadcrumb-item"><%= link_to "Blogs", blogs_path %></span>
@@ -23,7 +25,7 @@
     <% end %>
   </nav>
 
-  <p class="mb-1 blog-body"><%= markdown @blog.body %></p>
+  <div class="mb-1 md-body"><%= markdown @blog.body %></div>
   <hr>
   <div id="blog-id" data-blog-id="<%= @blog.id %>" ></div>
   <div id="user-id" data-user-id="<%= current_user.id %>"></div>

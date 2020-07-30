@@ -138,8 +138,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
 }
 .blog-post-meta {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.25rem;
   color: #999;
+
 }
 
 /*
@@ -205,4 +206,8 @@ blockquote{
   margin-top: -10px;
   margin-bottom: 5px;
   border-bottom: 5px solid #ff8000
+}
+
+.md-body{
+  color: #555 !important;
 }
