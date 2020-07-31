@@ -26,6 +26,8 @@ require("packs/html.sortable")
 import "bootstrap"
 import "controllers"
 import 'cocoon-js'
+import "packs/typed"
+import "packs/typed-implementation"
 
 
 

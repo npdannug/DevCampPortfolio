@@ -14,7 +14,8 @@ Rails.application.routes.draw do
       patch :move 
     end
   end
-
+  
+  mount ActionCable.server => '/cable'
 
   resources :blogs do
     member do
