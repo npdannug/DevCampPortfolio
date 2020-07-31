@@ -1,9 +1,10 @@
+
   <% unless current_user.is_a? GuestUser %>
   	<%= form_with(model: comment, local: true) do |f| %>
   		<div class="form-group">
-  			<%= f.text_area :context, class: 'form-control', id: 'comment' %>
+  			<%= f.text_area :context, class: 'form-control', id: 'comment', placeholder: "Redis has not yet been configured in Heroku thus comment section is disabled for now." %>
   		</div> 
   		<%= f.hidden_field :blog_id, value: blog.id %>
-  		<%= f.submit 'Post Comment', class: 'btn btn-primary', id: "post-comment" %>
+  		<%= f.submit 'Post Comment', class: 'btn btn-primary', id: "post-comment", disabled: true %>
   	<% end %>
   <% end %>
