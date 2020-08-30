@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact-me', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'
+  
   resources :portfolios do
     member do
       patch :move 

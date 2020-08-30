@@ -1,0 +1,11 @@
+<div data-id="<%= portfolio_item.id %>" class="col-md-4">
+  <div class="card mb-4 ">
+    <%= image_tag portfolio_item_img(portfolio_item, 'thumb'), class: "img-thumbnail"  %>
+    <div class="card-body p-0 ml-1">
+      <p class="card-text">
+        <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item), class: "mr-1 stretched-link" %>
+        <span class="text-muted"><em><%= portfolio_item.subtitle %></em></span>
+      </p>
+    </div>
+  </div>
+</div>
